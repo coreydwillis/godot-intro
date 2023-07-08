@@ -1,25 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dppihoyvdhn7r"]
+[gd_scene load_steps=3 format=3 uid="uid://dppihoyvdhn7r"]
 
 [ext_resource type="Texture2D" uid="uid://coa0clv74x6dw" path="res://icon.svg" id="1_uqqja"]
-[ext_resource type="Texture2D" uid="uid://c588br2isjht7" path="res://graphics/car/main.png" id="2_7ru3i"]
-[ext_resource type="PackedScene" uid="uid://d3x1g8m6y8jyc" path="res://scenes/player/player.tscn" id="3_sud2p"]
-[ext_resource type="PackedScene" uid="uid://ciir4jotrilpx" path="res://scenes/objects/bed.tscn" id="4_epsyf"]
+[ext_resource type="Script" path="res://scenes/levels/Logo.gd" id="2_sajoa"]
 
 [node name="Level" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("3_sud2p")]
-position = Vector2(455, 284)
-rotation = 11.8159
-
-[node name="Bed" parent="." instance=ExtResource("4_epsyf")]
-position = Vector2(1077, 90)
-rotation = 1.5708
-scale = Vector2(0.75, 0.75)
-
 [node name="Logo" type="Sprite2D" parent="."]
 texture = ExtResource("1_uqqja")
-centered = false
-
-[node name="car" type="Sprite2D" parent="Logo"]
-texture = ExtResource("2_7ru3i")
-centered = false
+script = ExtResource("2_sajoa")
